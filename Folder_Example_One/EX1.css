@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css?family=Carrois+Gothic");
+
+@font-face {
+  font-family: 'matrix-code';
+  src: url('http://neilcarpenter.com/demos/canvas/matrix/font/matrix-code.eot?#iefix') format('embedded-opentype'), 
+       url('http://neilcarpenter.com/demos/canvas/matrix/font/matrix-code.woff') format('woff'), 
+       url('http://neilcarpenter.com/demos/canvas/matrix/font/matrix-code.ttf')  format('truetype'),
+       url('http://neilcarpenter.com/demos/canvas/matrix/font/matrix-code.svg#svgFontName') format('svg');
+}
+
+html, body {
+    -webkit-font-smoothing: antialiased;
+    font: normal 12px/14px "Carrois Gothic", sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    color: #fff;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; 
+}
+
+body {
+  background: black;
+}
+
+.main-title {
+    font-weight: 400;
+    font-size: 15px;
+    color: white;
+    font-family: 'Bellefair', serif;
+    position:relative;
+    line-height:1.3;
+    white-spacing: 
+}
+
+
+.line-1{
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 100%;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
