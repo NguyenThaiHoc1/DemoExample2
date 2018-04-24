@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- CSS - framework -->
+	<link rel="stylesheet" href="./Folder_Example_One/bootstrap.min.css">
+	<!--  JS - framwork  -->
+	<script type="text/javascript" src="./Folder_Example_One/jquery.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="./Folder_Example_One/EX1.css"></link>
+
+
+	<style type="text/css">
+		
+		.menu-camera div {
+			text-align: center;
+			font-size: 16px;
+			text-decoration: none;
+		}
+
+		 .xxx {
+		 	margin: 15% 0px;
+            padding: 6px;
+            background-color: #f7f7f7;
+            color: #333;
+            max-height: 1000px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+          }
+	</style>
+</head>
+<body style="background: black;">
+	<canvas id="canvas" style="width: 100%;position: absolute;">
+	
+	</canvas>
+
+	
+	<div class="container" style="z-index: 1000;
+    position: absolute;
+    left: 20%;
+    top: -12%;>
+
+		<div class="">
+			<div class="xxx" style="color: #008F11; background: transparent;
+			font-size: 16px;
+    font-variant: oldstyle-nums;
+    font-weight: 400;
+    font-style: italic;">
+    <p class="main-title" style="font-size: 40px; text-align: center;">Code Challenge</p>
+
+    <p class="main-title" style="font-size: 18px; text-align: center;">
+    	Step 1: Please decode the text below to find the next step
+    </p>
+    <p class="main-title" style="font-size: 18px; text-align: center;">
+    	Step 2: Finding the question !
+    </p>
+
+     <p class="main-title" style="font-size: 16px; text-align: center;">
+    	Suggestion 687474703A2F2F7777772E636F6E76657274737472696E672E636F6D2F76692F456E636F64654465636F64652F4865784465636F6465DA7673DA68747470733A2F2F737461636B6F766572666C6F772E636F6D2F7175657374696F6E732F3230313437392F776861742D69732D626173652D36342D656E636F64696E672D757365642D666F72 (HEX DECODER)
+    </p>
+    <hr>
+
+ 	<p class="main-title" id="textpen">
+
+	
+		</p>			
+			</div>
+		</div>
+		
+	</div>
+
+
+
+	<script>
+	var i = 0;
+	var txt = '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';
+	var speed = 25;
+
+	function typeWriter() {
+	  if (i < txt.length) {
+	    document.getElementById("textpen").innerHTML += txt.charAt(i);
+	    i++;
+	    setTimeout(typeWriter, speed);
+	  }
+	}
+
+	typeWriter()
+	</script>
+
+	<script type="text/javascript" src="./Folder_Example_One/EX1.js"></script>
+	
+</body>
+</html>
